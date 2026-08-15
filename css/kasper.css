@@ -649,28 +649,41 @@ header .search i {
 
 .tst-skills .container {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width:992px) {
+  .tst-skills .container > div {
+    flex-basis: 45%;
+  }
+  
 }
 
 .tst-skills .testimonials .box {
   display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.tst-skills .testimonials .box .image img {
-  max-width: 100%;
-}
-
-.tst-skills .testimonials .box .image {
-  max-width: 100px;
-  height: 100px;
+.tst-skills .testimonials .box  img {
+  width: 100px;
   border-radius: 50%;
-  overflow: hidden;
-  flex: 1;
   margin-right: 50px;
-  margin-bottom: 100px;
+
 }
 
+@media (max-width: 767px) {
+  .tst-skills .testimonials .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tst-skills .testimonials .box img {
+    margin: 0 auto 20px;
+  }
+}
 .tst-skills .testimonials .box .text {
-  flex: 1;
+
   display: flex;
   flex-direction: column;
 }
@@ -683,16 +696,54 @@ header .search i {
   text-align: end;
   margin-bottom: 20px;
 }
-.tst-skills .skills .box {
 
+.tst-skills .skills .box {
+     margin-bottom: 20px;
 }
+
 
 .tst-skills .skills .box h4{
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 20px;
 
 }
 
-.tst-skills .skills .box .progress {
+.tst-skills .skills .box .prog {
+  background-color: #d0d0d0;
+  height: 30px;
+  width: 100%;
+}
 
+.tst-skills .skills .box span{
+  display: block;
+  background-color: var(--mainColor);
+  height: 30px;
+  position: relative;
+}
+
+.tst-skills .skills .box span::before{
+  content: attr(data-progress);
+  color: white;
+  background-color: black;
+  padding: 5px;
+  position: absolute;
+  right: -20px;
+  top: -40px;
+  border-radius: 6px;
+}
+
+.tst-skills .skills .box span::after{
+  content: '';
+  height: 10px;
+  width: 0px;
+  background-color: transparent;
+  position: absolute;
+  border-color: black transparent transparent transparent;
+  border-width: 10px;
+  border-style: solid;
+  right: -9px;
+  top: -14px;
 }
 
 
