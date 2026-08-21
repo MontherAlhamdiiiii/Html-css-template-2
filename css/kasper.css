@@ -506,7 +506,7 @@ header .search i {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 100%;
+  height: 99.5%;
   width: 100%;
   background-color: rgb(0 0 0 / 40%);
 }
@@ -554,10 +554,11 @@ header .search i {
 }
 
 .about img {
+  display: block;
   max-width: 100%;
   position: relative;
   bottom: -120px;
-  margin-top: -120px;
+  margin: -120px auto 0px;
 }
 
 @media (max-width: 767px) {
@@ -800,7 +801,7 @@ header .search i {
 
 .pricing .plan {
   text-align: center;
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
 }
 
 .pricing .plan .head {
@@ -818,8 +819,8 @@ header .search i {
 
 .pricing .plan .head span {
   display: block;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  width: fit-content;
+  margin: 20px auto 10px;
   font-size: 60px;
   font-weight: 700;
   position: relative;
@@ -829,7 +830,7 @@ header .search i {
   content: "$";
   position: absolute;
   top: 0px;
-  left: 40px;
+  left: -20px;
   font-size: 30px;
 }
 
@@ -837,7 +838,7 @@ header .search i {
   content: "/Mo";
   position: absolute;
   bottom: 0px;
-  left: 140px;
+  left: 65px;
   font-size: 20px;
 }
 
@@ -864,14 +865,14 @@ header .search i {
   border-top: 1px solid var(--mainColor);
 }
 
-.pricing .plan .foot a{
+.pricing .plan .foot a {
   text-decoration: none;
   padding: 15px;
   border: 1px solid var(--mainColor);
-  
 }
 
-.contact-text , .contact-link {
+.contact-text,
+.contact-link {
   text-align: center;
   display: block;
 }
@@ -879,7 +880,6 @@ header .search i {
 .contact-text {
   margin-top: 70px;
   font-size: 20px;
-
 }
 .contact-link {
   margin-top: 50px;
@@ -887,27 +887,26 @@ header .search i {
   background-color: var(--mainColor);
   color: WHITE;
   text-decoration: NONE;
-  width: 200PX;
-  margin: 50PX auto 0PX;
+  width: 200px;
+  margin: 50px auto 0px;
 }
 /* End Pricing Styles */
-
 
 /* Start subscribe */
 
 .subscribe {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url('../imgs/subscribe.jpg');
+  background-image: url("../imgs/subscribe.jpg");
   background-size: cover;
   position: relative;
   color: white;
 }
 .subscribe::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
-  left:0px;
+  left: 0px;
   width: 100%;
   height: 100%;
   background-color: rgb(0 0 0 / 30%);
@@ -919,35 +918,33 @@ header .search i {
   display: flex;
   align-items: center;
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .subscribe .container {
-  flex-direction: column;
-}
+    flex-direction: column;
+  }
 }
 
-.subscribe  form{
+.subscribe form {
   position: relative;
   display: flex;
   width: 500px;
   max-width: 100%;
 }
 
-.subscribe  i{
+.subscribe i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 25px;
-
 }
-.subscribe form input[type="email"]{
+.subscribe form input[type="email"] {
   background: none;
   border: 1px solid white;
   padding: 20px 20px 20px 60px;
   caret-color: var(--mainColor);
   width: calc(100% - 130px);
-
 }
-.subscribe form input[type="submit"]{
+.subscribe form input[type="submit"] {
   width: 130px;
   background-color: var(--mainColor);
   color: white;
@@ -961,22 +958,22 @@ header .search i {
   outline: none;
 }
 
-.subscribe form ::placeholder{
+.subscribe form ::placeholder {
   color: white;
 }
 
 .subscribe p {
-   line-height: 2;
-   margin-left: 50px;
+  line-height: 2;
+  margin-left: 50px;
 }
 
-@media (max-width:991px) {
-.subscribe p {
-   line-height: 2;
-   margin: 20px auto;
+@media (max-width: 991px) {
+  .subscribe p {
+    line-height: 2;
+    margin: 20px auto;
+    text-align: center;
+  }
 }
-}
-
 
 /* End subscribe */
 
@@ -1009,7 +1006,7 @@ header .search i {
 }
 .contact .content form textarea.main-input {
   height: 200px;
-  
+
   resize: none;
 }
 .contact .content form input[type="submit"] {
